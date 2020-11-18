@@ -104,7 +104,7 @@
       $.ajax({
         type: "GET",
         //YOUR TURN: Replace with csv export link
-        url: https://docs.google.com/spreadsheets/d/16OcTDSrZg88nIhj7w2oit5zRb5_oEvvoX_czBCBnKkE/gviz/tq?tqx=out:csv&sheet=Copyoftattooshops,
+        url: https://docs.google.com/spreadsheets/d/16OcTDSrZg88nIhj7w2oit5zRb5_oEvvoX_czBCBnKkE/gviz/tq?tqx=out:csv&sheet=Copyoftattooshops
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
