@@ -94,7 +94,7 @@
     mapboxgl.accessToken = pk.eyJ1Ijoicm1wb3J0IiwiYSI6ImNraG12eWwwcjBiMWQycXJkejByOTkzYXgifQ.nT_qKeXioBi2wM-T4Oqv2w; //Mapbox token 
     var map = new mapboxgl.Map({
       container: 'map', // container id
-      style: 'mapbox://styles/mapbox/streets-v11', //stylesheet location
+      style: mapbox://styles/mapbox/streets-v11, //stylesheet location
       center: [-122.411464, 37.7852299], // starting position
       zoom: 10,// starting zoom
       transformRequest: transformRequest
@@ -104,7 +104,7 @@
       $.ajax({
         type: "GET",
         //YOUR TURN: Replace with csv export link
-        url: https://docs.google.com/spreadsheets/d/16OcTDSrZg88nIhj7w2oit5zRb5_oEvvoX_czBCBnKkE/gviz/tq?tqx=out:csv&sheet=Copyoftattooshops
+        url: https://docs.google.com/spreadsheets/d/16OcTDSrZg88nIhj7w2oit5zRb5_oEvvoX_czBCBnKkE/gviz/tq?tqx=out:csv&sheet=Copyoftattooshops,
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
