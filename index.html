@@ -187,20 +187,15 @@
 
 </html>
 
-// YOUR TURN: add your Mapbox access token 
-mapboxgl.accessToken = pk.eyJ1Ijoicm1wb3J0IiwiYSI6ImNraG11d2Z6ajAweHgyc3F3YW42bHYwZmkifQ.VhXqgw6vxMbUqiP3p2fXjw;
-
-// YOUR TURN: add your Mapbox access token 
-      mapboxgl.accessToken = pk.eyJ1Ijoicm1wb3J0IiwiYSI6ImNraG11d2Z6ajAweHgyc3F3YW42bHYwZmkifQ.VhXqgw6vxMbUqiP3p2fXjw;
+ // YOUR TURN: add your Mapbox access token 
+      mapboxgl.accessToken = pk.eyJ1Ijoicm1wb3J0IiwiYSI6ImNraG12eWwwcjBiMWQycXJkejByOTkzYXgifQ.nT_qKeXioBi2wM-T4Oqv2w;
       var map = new mapboxgl.Map({
         container: 'map', // container id
         style: mapbox://styles/mapbox/streets-v11, // YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
         center: [-122.411464, 37.7852299], // starting position [lng, lat]
         zoom: 9 // starting zoom
       });
-
-
-    $(document).ready(function () {
+  $(document).ready(function () {
       $.ajax({
         type: "GET",
         // YOUR TURN: Replace 'url' value to CSV export link 
@@ -209,7 +204,6 @@ mapboxgl.accessToken = pk.eyJ1Ijoicm1wb3J0IiwiYSI6ImNraG11d2Z6ajAweHgyc3F3YW42bH
         success: function (csvData) { makeGeoJSON(csvData); }
       });
     });
-
 //Add the the layer to the map 
  map.addLayer({
      'id': 'csvData',
@@ -223,7 +217,6 @@ mapboxgl.accessToken = pk.eyJ1Ijoicm1wb3J0IiwiYSI6ImNraG11d2Z6ajAweHgyc3F3YW42bH
         'circle-color': "purple"
     }
 });
-
 // When a click event occurs on a feature in the csvData layer, open a popup at the
 // location of the feature, with description HTML from its properties.
 map.on('click', 'csvData', function (e) {
